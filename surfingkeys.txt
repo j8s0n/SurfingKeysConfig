@@ -57,6 +57,20 @@ api.addSearchAlias('w', 'Wikipedia', 'https://en.wikipedia.org/wiki/Special:Sear
     });
 });
 
+api.addSearchAlias('b', 'Brave', 'https://search.brave.com/search?q=', 's', 'https://search.brave.com/search?q=', function(response) {
+    var res = JSON.parse(response.text);
+    return res.map(function(r){
+        return r.phrase;
+    });
+});
+
+api.addSearchAlias('i', 'IMDb', 'http://www.imdb.com/find?s=all&q=', 's', 'http://www.imdb.com/find?s=all&q=', function(response) {
+    var res = JSON.parse(response.text);
+    return res.map(function(r){
+        return r.phrase;
+    });
+});
+
 // set theme
 settings.theme = `
 .sk_theme {
