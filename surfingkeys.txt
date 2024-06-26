@@ -10,24 +10,25 @@ api.map('gt', 'T');
 // an example to remove mapkey `Ctrl-i`
 api.unmap('<ctrl-i>');
 api.unmapAllExcept([], /hackerrank.com|leetcode.com/);
-api.unmap('x', /gmail.com|mail.google.com|mail.proton.me/);
+api.unmap('a', /gmail.com|mail.google.com|mail.proton.me/);
+api.unmap('b', /gmail.com|mail.google.com|mail.proton.me/);
+api.unmap('c', /gmail.com|mail.google.com|mail.proton.me/);
+api.unmap('d', /gmail.com|mail.google.com|mail.proton.me/);
+api.unmap('e', /gmail.com|mail.google.com|mail.proton.me/);
+api.unmap('f', /gmail.com|mail.google.com|mail.proton.me/);
+api.unmap('g', /gmail.com|mail.google.com|mail.proton.me/);
+api.unmap('!', /gmail.com|mail.google.com|mail.proton.me/);
+api.unmap('*', /gmail.com|mail.google.com|mail.proton.me/);
+api.unmap('/', /gmail.com|mail.google.com|mail.proton.me/);
+api.unmap('?', /gmail.com|mail.google.com|mail.proton.me/);
+api.unmap('i', /gmail.com|mail.google.com|mail.proton.me/);
 api.unmap('j', /gmail.com|mail.google.com|mail.proton.me/);
 api.unmap('k', /gmail.com|mail.google.com|mail.proton.me/);
-api.unmap('*', /gmail.com|mail.google.com|mail.proton.me/);
-api.unmap('a', /gmail.com|mail.google.com|mail.proton.me/);
-api.unmap('f', /gmail.com|mail.google.com|mail.proton.me/);
-api.unmap('/', /gmail.com|mail.google.com|mail.proton.me/);
-api.unmap('g', /gmail.com|mail.google.com|mail.proton.me/);
 api.unmap('m', /gmail.com|mail.google.com|mail.proton.me/);
-api.unmap('i', /gmail.com|mail.google.com|mail.proton.me/);
-api.unmap('b', /gmail.com|mail.google.com|mail.proton.me/);
-api.unmap('d', /gmail.com|mail.google.com|mail.proton.me/);
+api.unmap('r', /gmail.com|mail.google.com|mail.proton.me/);
 api.unmap('t', /gmail.com|mail.google.com|mail.proton.me/);
 api.unmap('v', /gmail.com|mail.google.com|mail.proton.me/);
-api.unmap('e', /gmail.com|mail.google.com|mail.proton.me/);
-api.unmap('?', /gmail.com|mail.google.com|mail.proton.me/);
-api.unmap('!', /gmail.com|mail.google.com|mail.proton.me/);
-api.unmap('r', /gmail.com|mail.google.com|mail.proton.me/);
+api.unmap('x', /gmail.com|mail.google.com|mail.proton.me/);
 api.unmap('z', /gmail.com|mail.google.com|mail.proton.me/);
 
 //---------------------------------------------------------
