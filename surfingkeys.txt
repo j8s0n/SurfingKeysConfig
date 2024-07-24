@@ -9,7 +9,7 @@ api.map('gt', 'T');
 
 // an example to remove mapkey `Ctrl-i`
 api.unmap('<ctrl-i>');
-api.unmapAllExcept([], /hackerrank.com|leetcode.com/);
+api.unmapAllExcept([], /hackerrank.com|leetcode.com/|docs.google.com);
 api.unmap('a', /gmail.com|mail.google.com|mail.proton.me/);
 api.unmap('b', /gmail.com|mail.google.com|mail.proton.me/);
 api.unmap('c', /gmail.com|mail.google.com|mail.proton.me/);
