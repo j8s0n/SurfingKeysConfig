@@ -7,7 +7,7 @@ api.mapkey('<ctrl-y>', 'Show me the money', function() {
 // an example to replace `T` with `gt`, click `Default mappings` to see how `T` works.
 api.map('gt', 'T');
 
-settings.blacklistPattern = /.*hackerrank.com.*|.*leetcode.com.*|.*docs.google.com.*/
+settings.blocklistPattern = /.*hackerrank.com.*|.*leetcode.com.*|.*docs.google.com.*/
 
 // an example to remove mapkey `Ctrl-i`
 api.unmap('<ctrl-i>');
