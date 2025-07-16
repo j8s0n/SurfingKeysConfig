@@ -88,7 +88,7 @@ api.removeSearchAlias('w')
 api.removeSearchAlias('x')
 api.removeSearchAlias('y')
 api.removeSearchAlias('z')
-api.addSearchAlias('az', 'Amazon', 'http://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=', 's', 'http://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=', function(response) {
+api.addSearchAlias('amz', 'Amazon', 'http://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=', 's', 'http://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=', function(response) {
     var res = JSON.parse(response.text);
     return res.map(function(r){
         return r.phrase;
@@ -109,7 +109,7 @@ api.addSearchAlias('br', 'Brave', 'https://search.brave.com/search?q=', 's', 'ht
     });
 });
 
-api.addSearchAlias('im', 'IMDb', 'http://www.imdb.com/find?s=all&q=', 's', 'http://www.imdb.com/find?s=all&q=', function(response) {
+api.addSearchAlias('imdb', 'IMDb', 'http://www.imdb.com/find?s=all&q=', 's', 'http://www.imdb.com/find?s=all&q=', function(response) {
     var res = JSON.parse(response.text);
     return res.map(function(r){
         return r.phrase;
