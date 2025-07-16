@@ -1,0 +1,199 @@
+// Import file:
+// https://raw.githubusercontent.com/j8s0n/SurfingKeysConfig/main/surfingkeys.txt
+api.mapkey('<ctrl-y>', 'Show me the money', function() {
+    Front.showPopup('a well-known phrase uttered by characters in the 1996 film Jerry Maguire (Escape to close).');
+});
+
+// an example to replace `T` with `gt`, click `Default mappings` to see how `T` works.
+api.map('gt', 'T');
+
+settings.blocklistPattern = /.*hackerrank.com.*|.*leetcode.com.*|.*docs.google.com.*/
+
+// an example to remove mapkey `Ctrl-i`
+api.unmap('<ctrl-i>');
+api.unmap('a', /gmail.com|mail.google.com|mail.proton.me/);
+api.unmap('b', /gmail.com|mail.google.com|mail.proton.me/);
+api.unmap('c', /gmail.com|mail.google.com|mail.proton.me/);
+api.unmap('d', /gmail.com|mail.google.com|mail.proton.me/);
+api.unmap('e', /gmail.com|mail.google.com|mail.proton.me/);
+api.unmap('f', /gmail.com|mail.google.com|mail.proton.me/);
+api.unmap('g', /gmail.com|mail.google.com|mail.proton.me/);
+api.unmap('!', /gmail.com|mail.google.com|mail.proton.me/);
+api.unmap('*', /gmail.com|mail.google.com|mail.proton.me/);
+api.unmap('/', /gmail.com|mail.google.com|mail.proton.me/);
+api.unmap('?', /gmail.com|mail.google.com|mail.proton.me/);
+api.unmap('i', /gmail.com|mail.google.com|mail.proton.me/);
+api.unmap('j', /gmail.com|mail.google.com|mail.proton.me/);
+api.unmap('k', /gmail.com|mail.google.com|mail.proton.me/);
+api.unmap('m', /gmail.com|mail.google.com|mail.proton.me/);
+api.unmap('r', /gmail.com|mail.google.com|mail.proton.me/);
+api.unmap('t', /gmail.com|mail.google.com|mail.proton.me/);
+api.unmap('v', /gmail.com|mail.google.com|mail.proton.me/);
+api.unmap('x', /gmail.com|mail.google.com|mail.proton.me/);
+api.unmap('z', /gmail.com|mail.google.com|mail.proton.me/);
+
+//---------------------------------------------------------
+//  Search engines
+//
+//  a ->  Amazon
+//  b ->  Brave
+//  c ->  Amazon
+//  d ->  Wiktionary
+//  e ->  Wikipedia (built in)
+//  f ->  
+//  g ->  Google (built in)
+//  h ->  History
+//  i ->  IMDb
+//  j ->  
+//  k ->  Kotlin
+//  l ->  
+//  m ->  Google Maps
+//  n ->  New Tab
+//  o ->  
+//  p ->  Pathfinder
+//  q ->  
+//  r ->  
+//  s ->  Stack Overflow
+//  t ->  YouTube
+//  u ->  
+//  v ->  
+//  w ->  Wikipedia
+//  x ->  Recently Closed
+//  y ->  Python 3.x
+//  z ->  Amazon
+//---------------------------------------------------------
+api.removeSearchAlias('a')
+api.removeSearchAlias('b')
+api.removeSearchAlias('c')
+api.removeSearchAlias('d')
+api.removeSearchAlias('e')
+api.removeSearchAlias('f')
+api.removeSearchAlias('g')
+api.removeSearchAlias('h')
+api.removeSearchAlias('i')
+api.removeSearchAlias('j')
+api.removeSearchAlias('k')
+api.removeSearchAlias('l')
+api.removeSearchAlias('m')
+api.removeSearchAlias('n')
+api.removeSearchAlias('o')
+api.removeSearchAlias('p')
+api.removeSearchAlias('q')
+api.removeSearchAlias('r')
+api.removeSearchAlias('s')
+api.removeSearchAlias('t')
+api.removeSearchAlias('u')
+api.removeSearchAlias('v')
+api.removeSearchAlias('w')
+api.removeSearchAlias('x')
+api.removeSearchAlias('y')
+api.removeSearchAlias('z')
+api.addSearchAlias('amz', 'Amazon', 'http://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=', 's', 'http://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=', function(response) {
+    var res = JSON.parse(response.text);
+    return res.map(function(r){
+        return r.phrase;
+    });
+});
+
+api.addSearchAlias('ah', 'Amazon History', 'https://www.amazon.com/gp/legacy/order-history?opt=ab&search=', 's', 'https://www.amazon.com/gp/legacy/order-history?opt=ab&search=', function(response) {
+    var res = JSON.parse(response.text);
+    return res.map(function(r){
+        return r.phrase;
+    });
+});
+
+api.addSearchAlias('br', 'Brave', 'https://search.brave.com/search?q=', 's', 'https://search.brave.com/search?q=', function(response) {
+    var res = JSON.parse(response.text);
+    return res.map(function(r){
+        return r.phrase;
+    });
+});
+
+api.addSearchAlias('imdb', 'IMDb', 'http://www.imdb.com/find?s=all&q=', 's', 'http://www.imdb.com/find?s=all&q=', function(response) {
+    var res = JSON.parse(response.text);
+    return res.map(function(r){
+        return r.phrase;
+    });
+});
+
+api.addSearchAlias('mp', 'Maps', 'http://maps.google.com/maps?oi=map&q=', 's', 'http://maps.google.com/maps?oi=map&q=', function(response) {
+    var res = JSON.parse(response.text);
+    return res.map(function(r){
+        return r.phrase;
+    });
+});
+
+api.addSearchAlias('pa', 'Pathfinder', 'https://cse.google.com/cse?cx=738be615ff31409f7&q=', 's', 'https://cse.google.com/cse?cx=738be615ff31409f7&q=', function(response) {
+    var res = JSON.parse(response.text);
+    return res.map(function(r){
+        return r.phrase;
+    });
+});
+
+api.addSearchAlias('py', 'Python', 'http://docs.python.org/3.3/search.html?q=', 's', 'http://docs.python.org/3.3/search.html?q=', function(response) {
+    var res = JSON.parse(response.text);
+    return res.map(function(r){
+        return r.phrase;
+    });
+});
+
+api.addSearchAlias('yt', 'YouTube', 'http://www.youtube.com/results?search_query=', 's', 'http://www.youtube.com/results?search_query=', function(response) {
+    var res = JSON.parse(response.text);
+    return res.map(function(r){
+        return r.phrase;
+    });
+});
+
+api.addSearchAlias('wk', 'Wikipedia', 'https://en.wikipedia.org/wiki/Special:Search?search=', 's', 'https://en.wikipedia.org/wiki/Special:Search?search=', function(response) {
+    var res = JSON.parse(response.text);
+    return res.map(function(r){
+        return r.phrase;
+    });
+});
+
+api.addSearchAlias('wt', 'Wiktionary', 'http://en.wiktionary.org/w/index.php?title=Special:Search&search=', 's', 'http://en.wiktionary.org/w/index.php?title=Special:Search&search=', function(response) {
+    var res = JSON.parse(response.text);
+    return res.map(function(r){
+        return r.phrase;
+    });
+});
+
+// set theme
+settings.theme = `
+.sk_theme {
+    font-family: Input Sans Condensed, Charcoal, sans-serif;
+    font-size: 10pt;
+    background: #24272e;
+    color: #abb2bf;
+}
+.sk_theme tbody {
+    color: #fff;
+}
+.sk_theme input {
+    color: #d0d0d0;
+}
+.sk_theme .url {
+    color: #61afef;
+}
+.sk_theme .annotation {
+    color: #56b6c2;
+}
+.sk_theme .omnibar_highlight {
+    color: #528bff;
+}
+.sk_theme .omnibar_timestamp {
+    color: #e5c07b;
+}
+.sk_theme .omnibar_visitcount {
+    color: #98c379;
+}
+.sk_theme #sk_omnibarSearchResult ul li:nth-child(odd) {
+    background: #303030;
+}
+.sk_theme #sk_omnibarSearchResult ul li.focused {
+    background: #3e4452;
+}
+#sk_status, #sk_find {
+    font-size: 20pt;
+}`;
+// click `Save` button to make above settings to take effect.</ctrl-i></ctrl-y>
