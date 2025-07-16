@@ -32,6 +32,33 @@ api.unmap('v', /gmail.com|mail.google.com|mail.proton.me/);
 api.unmap('x', /gmail.com|mail.google.com|mail.proton.me/);
 api.unmap('z', /gmail.com|mail.google.com|mail.proton.me/);
 
+api.removeSearchAlias('a')
+api.removeSearchAlias('b')
+api.removeSearchAlias('c')
+api.removeSearchAlias('d')
+api.removeSearchAlias('e')
+api.removeSearchAlias('f')
+api.removeSearchAlias('g')
+// api.removeSearchAlias('h')
+api.removeSearchAlias('i')
+api.removeSearchAlias('j')
+api.removeSearchAlias('k')
+api.removeSearchAlias('l')
+api.removeSearchAlias('m')
+api.removeSearchAlias('n')
+api.removeSearchAlias('o')
+api.removeSearchAlias('p')
+api.removeSearchAlias('q')
+api.removeSearchAlias('r')
+api.removeSearchAlias('s')
+api.removeSearchAlias('t')
+api.removeSearchAlias('u')
+api.removeSearchAlias('v')
+api.removeSearchAlias('w')
+// api.removeSearchAlias('x')
+api.removeSearchAlias('y')
+api.removeSearchAlias('z')
+
 //---------------------------------------------------------
 //  Search engines
 //
@@ -50,33 +77,6 @@ api.unmap('z', /gmail.com|mail.google.com|mail.proton.me/);
 //  xx   ->  Recently Closed
 //  yt   ->  YouTube
 //---------------------------------------------------------
-api.removeSearchAlias('a')
-api.removeSearchAlias('b')
-api.removeSearchAlias('c')
-api.removeSearchAlias('d')
-api.removeSearchAlias('e')
-api.removeSearchAlias('f')
-api.removeSearchAlias('g')
-api.removeSearchAlias('h')
-api.removeSearchAlias('i')
-api.removeSearchAlias('j')
-api.removeSearchAlias('k')
-api.removeSearchAlias('l')
-api.removeSearchAlias('m')
-api.removeSearchAlias('n')
-api.removeSearchAlias('o')
-api.removeSearchAlias('p')
-api.removeSearchAlias('q')
-api.removeSearchAlias('r')
-api.removeSearchAlias('s')
-api.removeSearchAlias('t')
-api.removeSearchAlias('u')
-api.removeSearchAlias('v')
-api.removeSearchAlias('w')
-api.removeSearchAlias('x')
-api.removeSearchAlias('y')
-api.removeSearchAlias('z')
-
 api.addSearchAlias('amz', 'Amazon', 'http://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=', 's', 'http://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=', function(response) {
     var res = JSON.parse(response.text);
     return res.map(function(r){
