@@ -35,32 +35,20 @@ api.unmap('z', /gmail.com|mail.google.com|mail.proton.me/);
 //---------------------------------------------------------
 //  Search engines
 //
-//  a ->  Amazon
-//  b ->  Brave
-//  c ->  Amazon
-//  d ->  Wiktionary
-//  e ->  Wikipedia (built in)
-//  f ->  
-//  g ->  Google (built in)
-//  h ->  History
-//  i ->  IMDb
-//  j ->  
-//  k ->  Kotlin
-//  l ->  
-//  m ->  Google Maps
-//  n ->  New Tab
-//  o ->  
-//  p ->  Pathfinder
-//  q ->  
-//  r ->  
-//  s ->  Stack Overflow
-//  t ->  YouTube
-//  u ->  
-//  v ->  
-//  w ->  Wikipedia
-//  x ->  Recently Closed
-//  y ->  Python 3.x
-//  z ->  Amazon
+//  amz  ->  Amazon
+//  ah   ->  Amazon history
+//  br   ->  Brave
+//  gg   ->  Google
+//  hi   ->  History
+//  imdb ->  IMDb
+//  map  ->  Google Maps
+//  pa   ->  Pathfinder
+//  py   ->  Python 3.x
+//  so   ->  Stack Overflow
+//  wk   ->  Wikipedia
+//  wt   ->  Wiktionary
+//  xx   ->  Recently Closed
+//  yt   ->  YouTube
 //---------------------------------------------------------
 api.removeSearchAlias('a')
 api.removeSearchAlias('b')
@@ -109,6 +97,10 @@ api.addSearchAlias('br', 'Brave', 'https://search.brave.com/search?q=', 's', 'ht
         return r.phrase;
     });
 });
+
+api.addSearchAlias('gg', 'Google', 'https://www.google.com/search?q=', 's', 'https://www.google.com/complete/search?client=chrome-omni&gs_ri=chrome-ext&oit=1&cp=1&pgcl=7&q=',
+  (response) => JSON.parse(response.text)?.[1]
+);
 
 api.addSearchAlias('imdb', 'IMDb', 'http://www.imdb.com/find?s=all&q=', 's', 'http://www.imdb.com/find?s=all&q=', function(response) {
     var res = JSON.parse(response.text);
