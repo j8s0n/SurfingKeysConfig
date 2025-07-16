@@ -62,77 +62,97 @@ api.unmap('z', /gmail.com|mail.google.com|mail.proton.me/);
 //  y ->  Python 3.x
 //  z ->  Amazon
 //---------------------------------------------------------
-api.addSearchAlias('a', 'Amazon', 'http://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=', 's', 'http://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=', function(response) {
+api.removeSearchAlias('a')
+api.removeSearchAlias('b')
+api.removeSearchAlias('c')
+api.removeSearchAlias('d')
+api.removeSearchAlias('e')
+api.removeSearchAlias('f')
+api.removeSearchAlias('g')
+api.removeSearchAlias('h')
+api.removeSearchAlias('i')
+api.removeSearchAlias('j')
+api.removeSearchAlias('k')
+api.removeSearchAlias('l')
+api.removeSearchAlias('m')
+api.removeSearchAlias('n')
+api.removeSearchAlias('o')
+api.removeSearchAlias('p')
+api.removeSearchAlias('q')
+api.removeSearchAlias('r')
+api.removeSearchAlias('s')
+api.removeSearchAlias('t')
+api.removeSearchAlias('u')
+api.removeSearchAlias('v')
+api.removeSearchAlias('w')
+api.removeSearchAlias('x')
+api.removeSearchAlias('y')
+api.removeSearchAlias('z')
+
+api.addSearchAlias('amz', 'Amazon', 'http://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=', 's', 'http://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=', function(response) {
     var res = JSON.parse(response.text);
     return res.map(function(r){
         return r.phrase;
     });
 });
 
-api.addSearchAlias('b', 'Brave', 'https://search.brave.com/search?q=', 's', 'https://search.brave.com/search?q=', function(response) {
+api.addSearchAlias('ah', 'Amazon History', 'https://www.amazon.com/gp/legacy/order-history?opt=ab&search=', 's', 'https://www.amazon.com/gp/legacy/order-history?opt=ab&search=', function(response) {
     var res = JSON.parse(response.text);
     return res.map(function(r){
         return r.phrase;
     });
 });
 
-api.addSearchAlias('d', 'Wiktionary', 'http://en.wiktionary.org/w/index.php?title=Special:Search&search=', 's', 'http://en.wiktionary.org/w/index.php?title=Special:Search&search=', function(response) {
+api.addSearchAlias('br', 'Brave', 'https://search.brave.com/search?q=', 's', 'https://search.brave.com/search?q=', function(response) {
     var res = JSON.parse(response.text);
     return res.map(function(r){
         return r.phrase;
     });
 });
 
-api.addSearchAlias('i', 'IMDb', 'http://www.imdb.com/find?s=all&q=', 's', 'http://www.imdb.com/find?s=all&q=', function(response) {
+api.addSearchAlias('imdb', 'IMDb', 'http://www.imdb.com/find?s=all&q=', 's', 'http://www.imdb.com/find?s=all&q=', function(response) {
     var res = JSON.parse(response.text);
     return res.map(function(r){
         return r.phrase;
     });
 });
 
-api.addSearchAlias('k', 'Kotlin', 'https://kotlinlang.org/docs/home.html?s=full&q=', 's', 'https://kotlinlang.org/docs/home.html?s=full&q=', function(response) {
+api.addSearchAlias('map', 'Maps', 'http://maps.google.com/maps?oi=map&q=', 's', 'http://maps.google.com/maps?oi=map&q=', function(response) {
     var res = JSON.parse(response.text);
     return res.map(function(r){
         return r.phrase;
     });
 });
 
-api.addSearchAlias('m', 'Maps', 'http://maps.google.com/maps?oi=map&q=', 's', 'http://maps.google.com/maps?oi=map&q=', function(response) {
+api.addSearchAlias('pa', 'Pathfinder', 'https://cse.google.com/cse?cx=738be615ff31409f7&q=', 's', 'https://cse.google.com/cse?cx=738be615ff31409f7&q=', function(response) {
     var res = JSON.parse(response.text);
     return res.map(function(r){
         return r.phrase;
     });
 });
 
-api.addSearchAlias('p', 'Pathfinder', 'https://cse.google.com/cse?cx=738be615ff31409f7&q=', 's', 'https://cse.google.com/cse?cx=738be615ff31409f7&q=', function(response) {
+api.addSearchAlias('py', 'Python', 'http://docs.python.org/3.3/search.html?q=', 's', 'http://docs.python.org/3.3/search.html?q=', function(response) {
     var res = JSON.parse(response.text);
     return res.map(function(r){
         return r.phrase;
     });
 });
 
-api.addSearchAlias('t', 'YouTube', 'http://www.youtube.com/results?search_query=', 's', 'http://www.youtube.com/results?search_query=', function(response) {
+api.addSearchAlias('wk', 'Wikipedia', 'https://en.wikipedia.org/wiki/Special:Search?search=', 's', 'https://en.wikipedia.org/wiki/Special:Search?search=', function(response) {
     var res = JSON.parse(response.text);
     return res.map(function(r){
         return r.phrase;
     });
 });
 
-api.addSearchAlias('w', 'Wikipedia', 'https://en.wikipedia.org/wiki/Special:Search?search=', 's', 'https://en.wikipedia.org/wiki/Special:Search?search=', function(response) {
+api.addSearchAlias('wt', 'Wiktionary', 'http://en.wiktionary.org/w/index.php?title=Special:Search&search=', 's', 'http://en.wiktionary.org/w/index.php?title=Special:Search&search=', function(response) {
     var res = JSON.parse(response.text);
     return res.map(function(r){
         return r.phrase;
     });
 });
 
-api.addSearchAlias('y', 'Python', 'http://docs.python.org/3.3/search.html?q=', 's', 'http://docs.python.org/3.3/search.html?q=', function(response) {
-    var res = JSON.parse(response.text);
-    return res.map(function(r){
-        return r.phrase;
-    });
-});
-
-api.addSearchAlias('z', 'Amazon History', 'https://www.amazon.com/gp/legacy/order-history?opt=ab&search=', 's', 'https://www.amazon.com/gp/legacy/order-history?opt=ab&search=', function(response) {
+api.addSearchAlias('yt', 'YouTube', 'http://www.youtube.com/results?search_query=', 's', 'http://www.youtube.com/results?search_query=', function(response) {
     var res = JSON.parse(response.text);
     return res.map(function(r){
         return r.phrase;
